@@ -1,9 +1,5 @@
 
-/* "Press any key to get started" 
-Use key event to start game when user
-presses any key.*/
-
-/*Populate an array with the list of words
+/*Create an array with the list of words
 the computer will choose from.*/
 var wordList = 
 ["Aqua", "Aquamarine", "Azure", "Beige", "Bisque", 
@@ -25,19 +21,31 @@ var wordList =
    console.log (wordList[i]);
  } */
 
+/* "Press any key to get started" 
+Use key event to start game when user
+presses any key.*/
+document.onkeyup = function(event) {
+
 /*computer randomly chooses a word from the array.*/
-var getNewWord = function () {
-var newWord = wordList[Math.floor(Math.random() * 50)];
-return newWord;
-};
+var newWord = wordList[Math.floor(Math.random() * wordList.length)];
+//console.log(newWord);
 
-console.log(wordList.length);
+var word = document.getElementById("word");
+//display "newWord" in div
+word.innerHTML = newWord;
 
-getNewWord();
-console.log(newWord);
-
-/*"current word" is displayed
+/*"newWord" is displayed
 as underscores where letters should be.*/
+//create array to hold "newWord" 
+var blankWord = new Array;
+//push "newWord" to the array
+blankWord.push(newWord);
+//console.log(blankWord);
+//split each letter of "newWord" into characters.
+var blanks = newWord.split("");
+console.log(blanks);
+
+}
 
 /*"letters chosen" If the letter guessed 
 is correct, it goes in the correct slot 
