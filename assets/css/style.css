@@ -1,10 +1,14 @@
 <style>
 
-#background {
- background-color: blue;
+body {
+	width: 100%;
+	background-color: #cccccc;
+	height: 800px;
 }
-
-p{
+h1 {
+	background-color: #cccccc;
+}
+p {
 color: red;
 }
 

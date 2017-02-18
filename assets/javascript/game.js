@@ -43,9 +43,16 @@ blankWord.push(newWord);
 //console.log(blankWord);
 //split each letter of "newWord" into characters.
 var blanks = newWord.split("");
-console.log(blanks);
 
+//console.log(blanks);
+
+//change each letter into an underscore
+ for (var i = 0; i < blanks.length; ++i) {
+        blanks[i] = "_ " ;
+    }
+console.log(blanks)
 }
+
 
 /*"letters chosen" If the letter guessed 
 is correct, it goes in the correct slot 
